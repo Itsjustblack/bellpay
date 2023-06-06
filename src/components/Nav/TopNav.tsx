@@ -3,7 +3,6 @@ import menu from "@icons/menu.svg";
 import { Link } from "react-router-dom";
 // import close from "@icons/close.svg";
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { type } from "os";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
 export type NavItemProps = { path: string; title: string };
@@ -33,11 +32,11 @@ const NavButton = ({ path, title, type }: NavButtonProps) => {
 };
 
 interface TopNavProps {
-	Open: boolean;
+	Open?: boolean;
 	setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const TopNav: React.FC<TopNavProps> = ({ Open, setOpen }) => {
+const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 	const [active, setActive] = useState(false);
 	const { scrollY } = useScroll();
 	useMotionValueEvent(scrollY, "change", (latest) => {
