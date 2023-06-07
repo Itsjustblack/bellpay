@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import HeroSection from "@sections/AboutSections/HeroSection";
 import CustomerCare from "@sections/AboutSections/CustomerCare";
 import TeamSection from "@sections/AboutSections/TeamSection";
-import GetStarted from "@sections/AboutSections/GetStarted";
+import GetStarted from "../components/GetStarted";
 
 const About = () => {
 	return (

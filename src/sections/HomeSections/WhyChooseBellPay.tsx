@@ -9,17 +9,21 @@ const WhyChooseBellPay: React.FC = () => {
 	];
 
 	return (
-		<section className="my-20 flex justify-between space-x-[30px]">
+		<section className="px-[32px] py-[100px] md:px-[60px] lg:px-[70px]">
+			<h2 className="mb-4 text-center text-[32px] font-semibold leading-[45px] text-[#000000D9]">BellPay provides the best value for you</h2>
+			<p className="text-center text-[20px] font-semibold leading-[26.6px] text-[#353535]">Our mission is To make payments easy and seamless for everyone, anywhere, and anytime.</p>
 			{/* Use Clamp Function for the body Text line-clamp-5 transition-all duration-[0.6s] hover:-translate-y-2 hover:scale-105 hover:shadow-lg*/}
-			{content.map((item) => (
-				<div
-					key={content.indexOf(item)}
-					className="w-full rounded-2xl p-6 shadow-lg"
-				>
-					<h2 className="mb-2 text-center text-[20px] font-semibold text-black">{item?.title}</h2>
-					<p className="break-words text-center text-base text-black">{item?.body}</p>
-				</div>
-			))}
+			<div className="mt-10 grid grid-cols-1 items-center justify-center gap-x-10 gap-y-[50px] sm:grid-cols-2 sm:space-y-0 md:mt-20 xl:flex xl:space-x-5">
+				{content.map((item) => (
+					<div
+						key={content.indexOf(item)}
+						className="h-[230px] w-full max-w-[300px] justify-self-center rounded-3xl px-10 py-6 shadow-[4px_4px_0px_#090909]"
+					>
+						<h2 className="mb-2 text-center text-[20px] font-semibold text-black">{item?.title}</h2>
+						<p className="break-words text-center text-base text-[#00000099]">{item?.body}</p>
+					</div>
+				))}
+			</div>
 		</section>
 	);
 };

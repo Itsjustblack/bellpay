@@ -14,6 +14,11 @@ body {
 	font-family: "Clash Display", sans-serif;
 }
 
+button:hover,
+button:focus {
+	outline: none;
+}
+
 img {
 	-webkit-user-drag: none;
 	user-select: none;

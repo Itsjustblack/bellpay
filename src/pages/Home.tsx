@@ -2,13 +2,17 @@ import HeroSection from "@sections/HomeSections/HeroSection";
 import Products from "@sections/HomeSections/Products";
 import WhyChooseBellPay from "@sections/HomeSections/WhyChooseBellPay";
 import Footer from "../components/Footer";
+import PaymentSection from "@sections/HomeSections/PaymentSection";
+import GetStarted from "../components/GetStarted";
 
 const Home = () => {
 	return (
-		<div className="flex flex-col items-center px-[70px] pt-[50px]">
+		<div className="mx-auto overflow-y-scroll">
 			<HeroSection />
-			<WhyChooseBellPay />
 			<Products />
+			<PaymentSection />
+			<WhyChooseBellPay />
+			<GetStarted />
 			<Footer />
 		</div>
 	);

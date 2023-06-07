@@ -5,6 +5,7 @@ export default {
 		extend: {
 			backgroundImage: {
 				heroImage: "url('/src/assets/images/bgImage.png')",
+				rough: "url('/src/assets/images/roughBg.png')",
 			},
 		},
 	},
