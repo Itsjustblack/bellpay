@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "@images/heroImage2.png";
+// import heroImage from "@images/heroImage2.png";
 import Visa from "@icons/visaLogo.svg";
 import MasterCard from "@icons/mastercardLogo.svg";
 import Paypal from "@icons/paypalLogo.svg";
@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
 					<p className="mb-6 max-w-[491.95px] break-words text-center text-base leading-[21px] text-[#00000099] lg:text-left lg:text-lg">Experience the ease, dependability, and security of our payment solutions by signing up with us today.</p>
 					<button className="w-[266px] rounded-xl bg-[#790096] py-2 text-xl font-medium tracking-wide text-white focus:outline-0 lg:rounded-lg lg:py-2">Get Started</button>
 				</div>
-				<div
+				{/* <div
 					style={{ zIndex: 1 }}
 					className="relative bottom-0 right-0 flex max-h-[550px] max-w-[550px] flex-1 lg:absolute"
 				>
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
 						src={heroImage}
 						className="h-full w-full object-fill"
 					/>
-				</div>
+				</div> */}
 			</div>
 			<div
 				style={{ zIndex: 20 }}
