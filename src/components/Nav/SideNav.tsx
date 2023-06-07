@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { NavItemProps } from "./TopNav";
-import React from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 interface SideNavProps {
 	Open: boolean;
+	setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ title, path }) => {
+export type NavItemProps = { path: string; title: string; setOpen: Dispatch<SetStateAction<boolean>> };
+
+const NavItem: React.FC<NavItemProps> = ({ title, path, setOpen }) => {
 	return (
 		<>
 			<Link
+				onClick={() => setOpen((prev) => !prev)}
 				to={`/${path}`}
 				className="p-4 text-base  tracking-wide"
 			>
@@ -21,7 +24,7 @@ const NavItem: React.FC<NavItemProps> = ({ title, path }) => {
 	);
 };
 
-const SideNav: React.FC<SideNavProps> = ({ Open }) => {
+const SideNav: React.FC<SideNavProps> = ({ Open, setOpen }) => {
 	return Open ? (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -34,18 +37,22 @@ const SideNav: React.FC<SideNavProps> = ({ Open }) => {
 			<NavItem
 				path=""
 				title="Products"
+				setOpen={setOpen}
 			/>
 			<NavItem
 				path="about"
 				title="About Us"
+				setOpen={setOpen}
 			/>
 			<NavItem
 				path=""
 				title="Blog"
+				setOpen={setOpen}
 			/>
 			<NavItem
 				path="faq"
 				title="FAQ"
+				setOpen={setOpen}
 			/>
 		</motion.div>
 	) : (
