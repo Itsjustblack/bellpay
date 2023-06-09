@@ -7,7 +7,7 @@ import GetStarted from "../components/GetStarted";
 
 const Home = () => {
 	return (
-		<div className="mx-auto overflow-y-scroll">
+		<div className="mx-auto overflow-y-scroll bg-white">
 			<HeroSection />
 			<Products />
 			<PaymentSection />
