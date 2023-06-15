@@ -9,6 +9,15 @@
 	padding: 0;
 }
 
+/* Fix Top Nav over Scrollbar */
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden auto;
+}
+
 body {
 	box-sizing: border-box;
 	font-family: "Clash Display", sans-serif;
@@ -30,15 +39,6 @@ img {
 .textClamp {
 	font-size: clamp(2.5rem, 3vw + 1rem, 3.75rem);
 }
-
-/* WhyChoosePayBell */
-
-/* .items > div {
-	border-right: 1px solid #ffffff;
-}
-.items > div:last-child {
-	border-right: none;
-} */
 
 /* SideNav */
 

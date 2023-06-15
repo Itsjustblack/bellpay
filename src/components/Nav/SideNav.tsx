@@ -15,7 +15,7 @@ const NavItem: React.FC<NavItemProps> = ({ title, path, setOpen }) => {
 			<Link
 				onClick={() => setOpen((prev) => !prev)}
 				to={`/${path}`}
-				className="p-4 text-base  tracking-wide"
+				className="w-full p-4  text-center text-base tracking-wide"
 			>
 				{title}
 			</Link>
@@ -34,7 +34,7 @@ const SideNav: React.FC<SideNavProps> = ({ Open, setOpen }) => {
 					exit={{ opacity: 0 }}
 					transition={{ opacity: { duration: 0.6, ease: "easeInOut" } }}
 					style={{ zIndex: 10 }}
-					className="navItems mt-[100px] flex h-full w-full flex-col items-center space-y-3 bg-white lg:hidden"
+					className="navItems mt-6 flex h-full w-full flex-col items-center space-y-3 bg-white lg:hidden"
 				>
 					<NavItem
 						path=""

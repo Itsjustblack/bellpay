@@ -25,8 +25,7 @@ const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
 				Open={open}
 				setOpen={setOpen}
 			/>
-			{/* <SideNav Open={open} /> */}
-			<div className="mt-[60px] w-full">
+			<div className="w-full pt-[60px]">
 				{open ? (
 					<SideNav
 						setOpen={setOpen}

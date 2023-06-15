@@ -65,7 +65,7 @@ const Products = () => {
 				<Payment />
 			</div>
 			<div className="flex flex-col space-y-5">
-				<h2 className="text-[32px] font-semibold leading-[38px] text-[#2E2E2E] lg:leading-[40px]">Integrated suit of payments products</h2>
+				<h2 className="text-[32px] font-semibold leading-[38px] text-[#2E2E2E] lg:leading-[40px]">Integrated suite of payments products</h2>
 				<p className="text-lg lg:text-xl ">With our innovative payment solutions, you can send and receive money, pay bills and make purchases effortlessly.</p>
 			</div>
 			<div className="block md:hidden">

@@ -23,7 +23,7 @@ type NavButtonProps = { path: string; title: string; type?: "invert" };
 const NavButton = ({ path, title, type }: NavButtonProps) => {
 	return (
 		<Link
-			className={`rounded-[10px] border px-4 py-2 text-base font-medium leading-[25.2px] ${type === "invert" && "bg-black text-white"}`}
+			className={`cursor-pointer rounded-[10px] border px-4 py-2 text-base font-medium leading-[25.2px] ${type === "invert" && "bg-black text-white"}`}
 			to={`${path}`}
 		>
 			{title}
@@ -48,7 +48,7 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 	});
 	return (
 		<div
-			style={{ zIndex: 99 }}
+			style={{ zIndex: 100 }}
 			className={`fixed top-0 flex h-[57.3px] w-full flex-row items-center justify-between space-x-[40px] bg-white px-8 transition-shadow duration-[0.5s] lg:h-[75px] lg:px-[60px] xl:px-[120px] ${active && "shadow"}`} /* shadow */
 		>
 			<img
@@ -56,9 +56,10 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 				className="h-[28px] w-[108px] lg:h-[35px] lg:w-[140px]"
 			/>
 			<img
+				style={{ zIndex: 100 }}
 				onClick={() => setOpen((prev) => !prev)}
 				src={menu}
-				className="h-8 w-8 lg:hidden"
+				className="h-8 w-8 cursor-pointer lg:hidden"
 			/>
 			<div className="hidden justify-center space-x-[50px] lg:flex">
 				<NavItem

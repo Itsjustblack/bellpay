@@ -3,10 +3,12 @@ import { Route, Routes } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import FAQ from "@pages/FAQ";
+import Video from "./components/Video";
 
 function App() {
 	return (
 		<div>
+			<Video />
 			<NavWrapper>
 				<Routes>
 					<Route

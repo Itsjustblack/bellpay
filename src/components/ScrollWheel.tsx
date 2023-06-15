@@ -7,7 +7,7 @@ const ScrollWheel = () => {
 	return (
 		<div
 			style={{ zIndex: 20 }}
-			className="relative bottom-0 grid h-[81px] w-full grid-cols-4 items-center space-x-5 bg-[#790096] px-[35px] py-6"
+			className="grid h-[81px] w-full grid-cols-4 items-center space-x-5 bg-[#790096] px-[35px] py-6"
 		>
 			<div className="flex max-h-[40px] flex-1">
 				<img

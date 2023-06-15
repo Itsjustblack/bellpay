@@ -6,8 +6,11 @@ import PaymentSection from "@sections/HomeSections/PaymentSection";
 import GetStarted from "../components/GetStarted";
 
 const Home = () => {
+	{
+		/* Sign up button should link to the  Coming Soon Page */
+	}
 	return (
-		<div className="mx-auto overflow-y-scroll bg-white">
+		<div className="bg-white">
 			<HeroSection />
 			<Products />
 			<PaymentSection />
