@@ -11,16 +11,17 @@ export const Question: React.FC<QuestionProps> = ({ id, title, answer }) => {
 	const [active, setActive] = useState<boolean>(false);
 	return (
 		<div
+			key={id}
 			onClick={() => setActive((prev) => !prev)}
-			className="flex cursor-pointer flex-col items-center rounded-3xl bg-[#7800960e] px-9 py-6 sm:py-10"
+			className="flex cursor-pointer flex-col items-center rounded-3xl bg-[#7800960e] px-5 py-6 sm:px-9 sm:py-10"
 		>
-			<div className="relative flex w-full items-center justify-between space-x-4">
+			<div className="relative flex w-full items-center justify-between space-x-5">
 				{/* <span className="text-lg font-medium sm:text-2xl lg:text-[50px]">{`${id}.`}</span> */}
-				<h2 className="text-sm font-semibold tracking-wide sm:text-xl lg:text-2xl">{title}</h2>
-				<div className="flex items-center space-x-4 rounded-2xl bg-white px-3 py-2">
-					<span className="block text-lg">{active ? "Open" : "Close"}</span>
+				<h2 className="text-base font-semibold tracking-wide sm:text-xl lg:text-2xl">{title}</h2>
+				<div className="flex items-center rounded-2xl bg-white px-2 py-2">
+					<span className="ml-1 mr-6 block text-sm sm:text-base md:mr-10 md:text-lg">{active ? "Open" : "Close"}</span>
 					<img
-						className={`relative right-0 h-[15px] w-[15px] sm:h-[24px] sm:w-[24px] ${active && "rotate-180"}`}
+						className={`absolute right-3 h-[12px] w-[12px] md:h-5 md:w-5 ${active && "rotate-180"}`}
 						src={downArrow}
 						alt=""
 					/>
