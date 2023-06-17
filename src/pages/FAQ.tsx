@@ -36,7 +36,7 @@ const FAQ = () => {
 	return (
 		<>
 			<div className="w-full bg-[#FDF6FF] px-9 py-16 sm:px-10 lg:px-[70px]">
-				<header className="mb-8 flex items-center justify-center space-x-[80px] text-[#4E0754] xl:space-x-[170px]">
+				<header className="mb-20 flex items-center justify-center space-x-[80px] text-[#4E0754] xl:space-x-[170px]">
 					<div className="text-center">
 						<h1 className="mb-4 text-[30px] font-bold leading-[36px] sm:text-[36px] sm:leading-[48px] lg:text-[60px] lg:leading-[50px]">
 							Frequently Asked <br /> Questions

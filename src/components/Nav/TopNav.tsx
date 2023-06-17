@@ -1,20 +1,22 @@
 import logo from "@icons/logoWithName.svg"; // @/assets/icons/logo.svg;
 import menu from "@icons/menu.svg";
 import { Link } from "react-router-dom";
-// import close from "@icons/close.svg";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import TopNavMenu from "./TopNavMenu";
 
-export type NavItemProps = { path: string; title: string };
+export type NavItemProps = { path: string; title: string; onClick?: () => void };
 
-const NavItem = ({ path, title }: NavItemProps) => {
+const NavItem = ({ path, title, onClick }: NavItemProps) => {
 	return (
-		<Link
-			className="text-base font-medium leading-[25.2px]"
-			to={`${path}`}
-		>
-			{title}
-		</Link>
+		<div onClick={() => onClick?.()}>
+			<Link
+				className="text-base font-medium leading-[25.2px]"
+				to={`${path}`}
+			>
+				{title}
+			</Link>
+		</div>
 	);
 };
 
@@ -38,58 +40,64 @@ interface TopNavProps {
 
 const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 	const [active, setActive] = useState(false);
+	const [overlay, setOverlay] = useState(false);
 	const { scrollY } = useScroll();
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		if (latest > 0) {
-			setActive(true);
+			setOverlay(true);
+			if (latest > 20) setActive(false);
 		} else {
-			setActive(false);
+			setOverlay(false);
 		}
 	});
 	return (
-		<div
-			style={{ zIndex: 100 }}
-			className={`fixed top-0 flex h-[57.3px] w-full flex-row items-center justify-between space-x-[40px] bg-white px-8 transition-shadow duration-[0.5s] lg:h-[75px] lg:px-[60px] xl:px-[120px] ${active && "shadow"}`} /* shadow */
-		>
-			<img
-				src={logo}
-				className="h-[28px] w-[108px] lg:h-[35px] lg:w-[140px]"
-			/>
-			<img
+		<div>
+			<div
 				style={{ zIndex: 100 }}
-				onClick={() => setOpen((prev) => !prev)}
-				src={menu}
-				className="h-8 w-8 cursor-pointer lg:hidden"
-			/>
-			<div className="hidden justify-center space-x-[50px] lg:flex">
-				<NavItem
-					path=""
-					title="Products"
+				className={`fixed top-0 flex h-[57.3px] w-full flex-row items-center justify-between space-x-[40px] bg-white px-8 transition-shadow duration-[0.5s] lg:h-[75px] lg:px-[60px] xl:px-[120px] ${overlay && "shadow"}`} /* shadow */
+			>
+				<img
+					src={logo}
+					className="h-[28px] w-[108px] lg:h-[35px] lg:w-[140px]"
 				/>
-				<NavItem
-					path="/about"
-					title="About Us"
+				<img
+					style={{ zIndex: 100 }}
+					onClick={() => setOpen((prev) => !prev)}
+					src={menu}
+					className="h-8 w-8 cursor-pointer lg:hidden"
 				/>
-				<NavItem
-					path=""
-					title="Blog"
-				/>
-				<NavItem
-					path="/faq"
-					title="FAQ"
-				/>
+				<div className="hidden justify-center space-x-[50px] lg:flex">
+					<NavItem
+						onClick={() => setActive((prev) => !prev)}
+						path=""
+						title="Products"
+					/>
+					<NavItem
+						path="/about"
+						title="About Us"
+					/>
+					<NavItem
+						path=""
+						title="Blog"
+					/>
+					<NavItem
+						path="/faq"
+						title="FAQ"
+					/>
+				</div>
+				<div className="hidden space-x-3 lg:flex xl:space-x-[30px]">
+					<NavButton
+						path=""
+						title="Sign In"
+					/>
+					<NavButton
+						path=""
+						title="Create Free Account"
+						type="invert"
+					/>
+				</div>
 			</div>
-			<div className="hidden space-x-3 lg:flex xl:space-x-[30px]">
-				<NavButton
-					path=""
-					title="Sign In"
-				/>
-				<NavButton
-					path=""
-					title="Create Free Account"
-					type="invert"
-				/>
-			</div>
+			{active && <TopNavMenu />}
 		</div>
 	);
 };

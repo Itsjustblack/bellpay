@@ -6,8 +6,9 @@ import FAQ from "@pages/FAQ";
 import Video from "./components/Video";
 
 function App() {
+	const { active } = useContext<VideoContextState>(videoContext);
 	return (
-		<div>
+		<div className={`${active && "h-[100vh] overflow-hidden"}`}>
 			<Video />
 			<NavWrapper>
 				<Routes>
@@ -28,5 +29,7 @@ function App() {
 		</div>
 	);
 }
+import { VideoContextState, videoContext } from "./context/VideoContext";
+import { useContext } from "react";
 
 export default App;

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import heroImage from "@images/bg-hero.jpg";
-import ScrollWheel from "../../components/ScrollWheel";
+import ScrollWheel from "../../components/ScrollWheel.jsx";
+import play from "@icons/play.svg";
 import { VideoContextState, videoContext } from "../../context/VideoContext.jsx";
 
 const HeroSection: React.FC = () => {
@@ -16,12 +17,17 @@ const HeroSection: React.FC = () => {
 					<button className="w-[266px] rounded-xl bg-[#790096] py-2 text-xl font-medium tracking-wide text-white focus:outline-0 lg:rounded-lg lg:py-2">Get Started</button>
 				</div>
 				<div className="hero relative mb-6 flex max-h-[250px] max-w-[350px] flex-1 overflow-hidden rounded-xl md:mb-10 lg:mb-0 lg:max-h-[300px] lg:max-w-[450px]">
-					<div className="absolute flex h-full w-full items-center justify-center bg-[#79009663] opacity-60">
-						<svg
+					<div className="absolute flex h-full w-full cursor-pointer items-center justify-center bg-[#79009663] opacity-60">
+						<img
+							onClick={() => setActive(true)}
+							src={play}
+							className="w-[80px] object-contain transition-all duration-[0.6s] hover:scale-150"
+						/>
+						{/* <svg
 							onClick={() => setActive(true)}
 							height="80"
 							width="80"
-							className="transition-all duration-[0.6s] hover:scale-125"
+							className="hidden transition-all duration-[0.6s] hover:scale-125 lg:block"
 						>
 							<circle
 								cx="40"
@@ -29,7 +35,7 @@ const HeroSection: React.FC = () => {
 								r="40"
 								fill="white"
 							/>
-						</svg>
+						</svg> */}
 					</div>
 					<img
 						src={heroImage}

@@ -20,7 +20,7 @@ const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
 	}, [pathname]);
 
 	return (
-		<div>
+		<div className="h-[1000px]">
 			<TopNav
 				Open={open}
 				setOpen={setOpen}

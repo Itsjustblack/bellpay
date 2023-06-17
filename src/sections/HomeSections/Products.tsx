@@ -7,15 +7,15 @@ import onlinepay from "@icons/onlinepay.svg";
 
 const Payment = () => {
 	return (
-		<div className="mb-10 flex max-w-[414px] flex-col items-center justify-center space-y-[30px] rounded-2xl bg-white px-6 py-7 shadow-[7px_10px_30px_#00000017] md:min-w-[300px] lg:min-w-[400px]">
+		<div className="mb-10 flex max-w-[414px] flex-col items-start justify-center space-y-[30px] rounded-2xl bg-white px-6 py-7 shadow-[7px_10px_30px_#00000017] md:min-w-[300px] lg:min-w-[400px]">
 			<div className="flex items-center justify-center space-x-7">
 				<img
 					src={wallet}
 					className="max-h-[42px] max-w-[42px] object-contain lg:max-h-[62px] lg:max-w-[62px]"
 				/>
 				<div className="mx-auto">
-					<h2 className="mb-1 text-lg font-semibold lg:text-2xl">Bulk Payment</h2>
-					<p className="text-sm sm:text-base">Make bulk payments with ease</p>
+					<h2 className="text-lg font-semibold lg:text-2xl">Bell Mi</h2>
+					<p className="text-sm sm:text-base">Spend and Pay on WhatsApp</p>
 				</div>
 			</div>
 			<div className="flex items-center justify-center space-x-7">
@@ -24,8 +24,8 @@ const Payment = () => {
 					className="max-h-[42px] max-w-[42px] object-contain lg:max-h-[62px] lg:max-w-[62px]"
 				/>
 				<div className="mx-auto">
-					<h2 className="mb-1 text-lg font-semibold lg:text-2xl">Bulk Payment</h2>
-					<p className="text-sm sm:text-base">Make bulk payments with ease</p>
+					<h2 className="text-lg font-semibold lg:text-2xl">Bell Shop</h2>
+					<p className="text-sm sm:text-base">Make payments through various channels</p>
 				</div>
 			</div>
 			<div className="flex items-center justify-center space-x-7">
@@ -34,8 +34,8 @@ const Payment = () => {
 					className="max-h-[42px] max-w-[42px] object-contain lg:max-h-[62px] lg:max-w-[62px]"
 				/>
 				<div className="mx-auto">
-					<h2 className="mb-1 text-lg font-semibold lg:text-2xl">Bulk Payment</h2>
-					<p className="text-sm sm:text-base">Make bulk payments with ease</p>
+					<h2 className="text-lg font-semibold lg:text-2xl">Bell CheckOut</h2>
+					<p className="text-sm sm:text-base">Accept online payments on any platform</p>
 				</div>
 			</div>
 		</div>
@@ -66,7 +66,7 @@ const Products = () => {
 			</div>
 			<div className="flex flex-col space-y-5">
 				<h2 className="text-[32px] font-semibold leading-[38px] text-[#2E2E2E] lg:leading-[40px]">Integrated suite of payments products</h2>
-				<p className="text-lg lg:text-xl ">With our innovative payment solutions, you can send and receive money, pay bills and make purchases effortlessly.</p>
+				<p className="text-lg lg:text-xl">With our innovative payment solutions, you can send and receive money, pay bills and make purchases effortlessly.</p>
 			</div>
 			<div className="block md:hidden">
 				<Payment />

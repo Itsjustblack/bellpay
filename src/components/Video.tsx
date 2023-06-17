@@ -7,7 +7,7 @@ import close from "@icons/close.svg";
 const Video: React.FC = () => {
 	const { active, setActive } = useContext<VideoContextState>(videoContext);
 	return active ? (
-		<div className="fixed z-[1043] flex h-full w-full items-center justify-center">
+		<div className="fixed z-[1043] flex h-full w-full items-center justify-center overflow-hidden">
 			<div
 				onClick={() => setActive(false)}
 				className="absolute h-full w-full bg-[#0b0b0b] bg-opacity-80"
@@ -24,7 +24,6 @@ const Video: React.FC = () => {
 					autoPlay
 					controls
 					autoFocus
-					muted
 				/>
 			</div>
 		</div>

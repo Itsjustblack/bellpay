@@ -4,6 +4,7 @@ import WhyChooseBellPay from "@sections/HomeSections/WhyChooseBellPay";
 import Footer from "../components/Footer";
 import PaymentSection from "@sections/HomeSections/PaymentSection";
 import GetStarted from "../components/GetStarted";
+import Pricing from "@sections/HomeSections/Pricing";
 
 const Home = () => {
 	{
@@ -14,6 +15,7 @@ const Home = () => {
 			<HeroSection />
 			<Products />
 			<PaymentSection />
+			<Pricing />
 			<WhyChooseBellPay />
 			<GetStarted />
 			<Footer />

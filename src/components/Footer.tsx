@@ -3,6 +3,7 @@ import logoWithName from "@icons/logoWithName.svg";
 import twitter from "@icons/twitter.svg";
 import facebook from "@icons/facebook.svg";
 import instagram from "@icons/instagram.svg";
+import youtube from "@icons/youtube.svg";
 import { Link } from "react-router-dom";
 
 export type NavItemProps = { path: string; title: string };
@@ -29,35 +30,86 @@ const Footer: React.FC = () => {
 			<div className="relative grid w-full grid-cols-3 justify-center gap-x-10 md:hidden">
 				<div className="mt-2 flex w-fit flex-col space-y-3">
 					<h2 className="text-sm font-semibold tracking-wide">Company</h2>
-					<a className="text-sm tracking-wide">About Us</a>
-					<a className="text-sm tracking-wide">Blog</a>
-					<a className="text-sm tracking-wide">FAQs</a>
+					<NavItem
+						path="/about"
+						title="About Us"
+					/>
+					<NavItem
+						path="/"
+						title="Blog"
+					/>
+					<NavItem
+						path="/faq"
+						title="FAQs"
+					/>
 				</div>
 				<div className="mt-2 flex w-fit flex-col space-y-3">
 					<h2 className="text-sm font-semibold tracking-wide">Legal</h2>
-					<a className="text-sm tracking-wide">Terms of Service</a>
-					<a className="text-sm tracking-wide">Developers</a>
+					<NavItem
+						path="/"
+						title="Terms of Service"
+					/>
+					<NavItem
+						path="/"
+						title="Privacy and Policy"
+					/>
 				</div>
 				<div className="flex w-fit flex-col space-y-3">
 					<h2 className="text-sm font-semibold tracking-wide">Products</h2>
-					<a className="text-sm tracking-wide">Bell Shop</a>
-					<a className="text-sm tracking-wide">Bell Payment Links</a>
-					<a className="text-sm tracking-wide">Bell CheckOut</a>
-					<a className="text-sm tracking-wide">BellMi</a>
-					<a className="text-sm tracking-wide">Payouts</a>
-					<a className="text-sm tracking-wide">Bills n Pay</a>
+					<NavItem
+						path="/"
+						title="Bell Shop"
+					/>
+					<NavItem
+						path="/"
+						title="Bell Payment Links"
+					/>
+					<NavItem
+						path="/"
+						title="Bell CheckOut"
+					/>
+					<NavItem
+						path="/"
+						title="BellMi"
+					/>
+					<NavItem
+						path="/"
+						title="Payouts"
+					/>
+					<NavItem
+						path="/"
+						title="Bills n Pay"
+					/>
 				</div>
 				<div className="relative bottom-[75px] flex w-fit flex-col space-y-3 md:bottom-5">
 					<h2 className="text-sm font-semibold tracking-wide">Resources</h2>
-					<a className="text-sm tracking-wide">Career Opportunities</a>
-					<a className="text-sm tracking-wide">What are our customers saying?</a>
-					<a className="text-sm tracking-wide">Contact us</a>
+					<NavItem
+						path="/faq"
+						title="Career Opportunities"
+					/>
+					<NavItem
+						path="/"
+						title="Developers"
+					/>
+					<NavItem
+						path="/faq"
+						title="What are our customers saying?"
+					/>
 				</div>
 				<div className="hidden w-fit flex-col space-y-3 sm:flex">
 					<h2 className="text-sm font-semibold tracking-wide">Help</h2>
-					<a className="text-sm tracking-wide">Contact Us</a>
-					<a className="text-sm tracking-wide">Terms of Service</a>
-					<a className="text-sm tracking-wide">Privacy and Policy</a>
+					<NavItem
+						path="/"
+						title="Contact Us"
+					/>
+					<NavItem
+						path="/"
+						title="Terms of Service"
+					/>
+					<NavItem
+						path="/"
+						title="Press and Media"
+					/>
 				</div>
 			</div>
 
@@ -86,7 +138,7 @@ const Footer: React.FC = () => {
 					/>
 					<NavItem
 						path="/"
-						title="Developers"
+						title="Privacy and Policy"
 					/>
 				</div>
 				<div className="flex w-full flex-col space-y-3">
@@ -119,11 +171,15 @@ const Footer: React.FC = () => {
 				<div className="flex w-full flex-col space-y-3">
 					<h2 className="text-sm font-semibold tracking-wide">Resources</h2>
 					<NavItem
-						path="/"
+						path="/faq"
 						title="Career Opportunities"
 					/>
 					<NavItem
 						path="/"
+						title="Developers"
+					/>
+					<NavItem
+						path="/faq"
 						title="What are our customers saying?"
 					/>
 					{/* <NavItem
@@ -143,7 +199,7 @@ const Footer: React.FC = () => {
 					/>
 					<NavItem
 						path="/"
-						title="Privacy and Policy"
+						title="Press and Media"
 					/>
 				</div>
 			</div>
@@ -182,6 +238,16 @@ const Footer: React.FC = () => {
 						<img
 							src={instagram}
 							className="h-[25px] w-[25px] cursor-pointer lg:h-[42px] lg:w-[42px]"
+						/>
+					</a>
+					<a
+						href="https://www.youtube.com/channel/UCR5liESIcNflOZSGx0aX2dw"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src={youtube}
+							className="h-[25px] w-[25px] cursor-pointer lg:h-[37px] lg:w-[37px]"
 						/>
 					</a>
 				</div>

@@ -9,15 +9,6 @@
 	padding: 0;
 }
 
-/* Fix Top Nav over Scrollbar */
-
-html,
-body {
-	margin: 0;
-	height: 100%;
-	overflow: hidden auto;
-}
-
 body {
 	box-sizing: border-box;
 	font-family: "Clash Display", sans-serif;
@@ -47,4 +38,17 @@ img {
 	width: 100%;
 	color: black;
 	border-color: black;
+}
+
+.carousel {
+	animation: carouselAnimation 15s linear infinite;
+}
+
+@keyframes carouselAnimation {
+	0% {
+		left: -1100px;
+	}
+	100% {
+		left: 1200px;
+	}
 }
