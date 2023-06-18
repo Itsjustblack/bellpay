@@ -1,4 +1,5 @@
 import customerCare2 from "@images/customerCare2.png";
+import LazyLoadImage from "../../components/LazyLoadImage";
 
 const CustomerCare = () => {
 	return (
@@ -6,10 +7,9 @@ const CustomerCare = () => {
 			{/* Desktop Version */}
 			<section className="hidden w-full items-center justify-center space-x-[75px] bg-[#7900961A] p-20 lg:flex">
 				<div className="flex flex-1 overflow-hidden rounded-lg">
-					<img
-						className="h-auto w-full object-cover"
+					<LazyLoadImage
 						src={customerCare2}
-						alt=""
+						className="h-auto w-full object-cover"
 					/>
 				</div>
 				<div className="flex max-w-[50%] flex-col space-y-[30px]">
@@ -25,10 +25,9 @@ const CustomerCare = () => {
 					<p className="text-base leading-[26.6px] sm:text-[20px]">At BellPay, we place a high premium on customer satisfaction. We understand that our success depends on the success of our customers, and we are committed to helping our customers achieve their payment goals. </p>
 				</div>
 				<div className="flex flex-1 overflow-hidden px-[28px] sm:px-[60px]">
-					<img
-						className="h-auto w-full object-cover"
+					<LazyLoadImage
 						src={customerCare2}
-						alt=""
+						className="h-auto w-full object-cover"
 					/>
 				</div>
 			</section>

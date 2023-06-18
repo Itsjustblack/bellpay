@@ -1,13 +1,13 @@
 import leftConfetti from "@images/leftConfetti.png";
 import rightConfetti from "@images/rightConfetti.png";
+import LazyLoadImage from "../../components/LazyLoadImage";
 
 const HeroSection = () => {
 	return (
 		<header className="flex flex-col justify-between px-[35px] py-[50px] sm:px-[70px] lg:px-[180px] lg:py-[100px]">
-			<img
-				className="absolute left-0 top-[22px] w-[69px] object-cover sm:w-[90px] lg:w-[151px]"
+			<LazyLoadImage
 				src={leftConfetti}
-				alt=""
+				className="absolute left-0 top-[22px] w-[69px] object-cover sm:w-[90px] lg:w-[151px]"
 			/>
 			<div
 				style={{ zIndex: 10 }}
@@ -24,10 +24,9 @@ const HeroSection = () => {
 					<p>{`We use state-of-the-art security measures to protect our customers' data and transactions, and we work closely with our partners to ensure that our payment solutions are secure and reliable.`}</p>
 				</div>
 			</div>
-			<img
-				className="absolute -top-2 right-0 w-[69px] object-cover sm:w-[90px] lg:w-[151px]"
+			<LazyLoadImage
 				src={rightConfetti}
-				alt=""
+				className="absolute -top-2 right-0 w-[69px] object-cover sm:w-[90px] lg:w-[151px]"
 			/>
 		</header>
 	);

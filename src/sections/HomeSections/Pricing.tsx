@@ -1,13 +1,15 @@
 import productImage3 from "@images/productImage3.png";
+import { lazy } from "react";
+
+const LazyLoadImage = lazy(() => import("../../components/LazyLoadImage"));
 
 const Pricing = () => {
 	return (
 		<div className="mx-[32px] mt-[100px] flex min-h-[300px] items-center justify-between rounded-[30px] bg-[#000000] px-16 py-12 text-center text-white md:mx-[60px] md:space-x-12 md:py-8 md:text-start lg:mx-[70px] lg:px-12">
 			<div className="flex max-h-[500px] max-w-[400px] flex-grow xl:max-h-[600px] xl:max-w-[541px]">
-				<img
-					className="hidden object-cover md:block"
+				<LazyLoadImage
 					src={productImage3}
-					alt=""
+					className="hidden object-cover md:block"
 				/>
 			</div>
 			<div className="flex w-full flex-col justify-center md:w-[60%] lg:items-start">

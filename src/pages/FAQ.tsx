@@ -3,6 +3,7 @@ import downArrow from "@icons/downArrow.svg";
 import React, { useState } from "react";
 import { Questions, QuestionProps } from "./../data";
 import Footer from "../components/Footer";
+import LazyLoadImage from "../components/LazyLoadImage";
 
 export const Question: React.FC<QuestionProps> = ({ id, title, answer }) => {
 	{
@@ -43,10 +44,9 @@ const FAQ = () => {
 						</h1>
 						<p className="text-lg lg:text-xl">Here are some common questions about BellPay.</p>
 					</div>
-					<img
-						className="hidden lg:block"
+					<LazyLoadImage
 						src={QAImage}
-						alt=""
+						className="hidden lg:block"
 					/>
 				</header>
 				<div className="mb-20 flex flex-col space-y-10">

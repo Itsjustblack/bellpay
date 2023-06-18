@@ -1,13 +1,15 @@
 import cards from "@images/cards.png";
+import { lazy } from "react";
+
+const LazyLoadImage = lazy(() => import("../../components/LazyLoadImage"));
 
 const PaymentSection = () => {
 	return (
 		<section className="flex items-center justify-center bg-[#7900961A] bg-rough bg-cover bg-center bg-no-repeat px-[32px] py-[100px] md:space-x-[50px] md:px-[70px]">
 			<div className="hidden max-w-[400px] flex-1 md:flex">
-				<img
-					className="h-auto w-full object-cover"
+				<LazyLoadImage
 					src={cards}
-					alt=""
+					className="h-auto w-full object-cover"
 				/>
 			</div>
 			<div className="w-full md:max-w-[65%]">

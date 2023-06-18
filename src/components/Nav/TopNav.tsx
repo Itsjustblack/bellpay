@@ -77,7 +77,7 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 						title="About Us"
 					/>
 					<NavItem
-						path=""
+						path="/"
 						title="Blog"
 					/>
 					<NavItem
