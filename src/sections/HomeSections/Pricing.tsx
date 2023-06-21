@@ -1,7 +1,5 @@
 import productImage3 from "@images/productImage3.png";
-import { lazy } from "react";
-
-const LazyLoadImage = lazy(() => import("../../components/LazyLoadImage"));
+import LazyLoadImage from "../../components/LazyLoadImage";
 
 const Pricing = () => {
 	return (

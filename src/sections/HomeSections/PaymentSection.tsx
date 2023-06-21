@@ -1,7 +1,5 @@
 import cards from "@images/cards.png";
-import { lazy } from "react";
-
-const LazyLoadImage = lazy(() => import("../../components/LazyLoadImage"));
+import LazyLoadImage from "../../components/LazyLoadImage";
 
 const PaymentSection = () => {
 	return (

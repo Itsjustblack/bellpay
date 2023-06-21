@@ -3,7 +3,7 @@ import menu from "@icons/menu.svg";
 import { Link } from "react-router-dom";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import TopNavMenu from "./TopNavMenu";
+// import TopNavMenu from "./TopNavMenu";
 
 export type NavItemProps = { path: string; title: string; onClick?: () => void };
 
@@ -39,13 +39,13 @@ interface TopNavProps {
 }
 
 const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
-	const [active, setActive] = useState(false);
+	// const [active, setActive] = useState(false);
 	const [overlay, setOverlay] = useState(false);
 	const { scrollY } = useScroll();
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		if (latest > 0) {
 			setOverlay(true);
-			if (latest > 20) setActive(false);
+			// if (latest > 20) setActive(false);
 		} else {
 			setOverlay(false);
 		}
@@ -68,8 +68,8 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 				/>
 				<div className="hidden justify-center space-x-[50px] lg:flex">
 					<NavItem
-						onClick={() => setActive((prev) => !prev)}
-						path=""
+						// onClick={() => setActive((prev) => !prev)}
+						path="/"
 						title="Products"
 					/>
 					<NavItem
@@ -87,17 +87,17 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 				</div>
 				<div className="hidden space-x-3 lg:flex xl:space-x-[30px]">
 					<NavButton
-						path=""
+						path="/comingsoon"
 						title="Sign In"
 					/>
 					<NavButton
-						path=""
+						path="/gh"
 						title="Create Free Account"
 						type="invert"
 					/>
 				</div>
 			</div>
-			{active && <TopNavMenu />}
+			{/* {active && <TopNavMenu />} */}
 		</div>
 	);
 };

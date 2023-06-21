@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Questions, QuestionProps } from "./../data";
 import Footer from "../components/Footer";
 import LazyLoadImage from "../components/LazyLoadImage";
+import Layout from "../components/Layout";
 
 export const Question: React.FC<QuestionProps> = ({ id, title, answer }) => {
 	{
@@ -35,7 +36,7 @@ export const Question: React.FC<QuestionProps> = ({ id, title, answer }) => {
 
 const FAQ = () => {
 	return (
-		<>
+		<Layout>
 			<div className="w-full bg-[#FDF6FF] px-9 py-16 sm:px-10 lg:px-[70px]">
 				<header className="mb-20 flex items-center justify-center space-x-[80px] text-[#4E0754] xl:space-x-[170px]">
 					<div className="text-center">
@@ -62,7 +63,7 @@ const FAQ = () => {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</Layout>
 	);
 };
 

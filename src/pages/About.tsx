@@ -3,16 +3,17 @@ import HeroSection from "@sections/AboutSections/HeroSection";
 import CustomerCare from "@sections/AboutSections/CustomerCare";
 import TeamSection from "@sections/AboutSections/TeamSection";
 import GetStarted from "../components/GetStarted";
+import Layout from "../components/Layout";
 
 const About = () => {
 	return (
-		<div className="relative">
+		<Layout>
 			<HeroSection />
 			<CustomerCare />
 			<TeamSection />
 			<GetStarted />
 			<Footer />
-		</div>
+		</Layout>
 	);
 };
 

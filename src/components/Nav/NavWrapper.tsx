@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import TopNav from "./TopNav.tsx";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import SideNav from "./SideNav";
 
 interface NavWrapperProps {
@@ -11,16 +9,9 @@ interface NavWrapperProps {
 
 const NavWrapper: React.FC<NavWrapperProps> = ({ children }) => {
 	const [open, setOpen] = useState(false);
-	const { pathname } = useLocation();
-	useEffect(() => {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	}, [pathname]);
 
 	return (
-		<div className="h-[1000px]">
+		<div>
 			<TopNav
 				Open={open}
 				setOpen={setOpen}

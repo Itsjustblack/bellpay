@@ -17,7 +17,7 @@ const WhyChooseBellPay: React.FC = () => {
 				{content.map((item) => (
 					<div
 						key={content.indexOf(item)}
-						className="duraton-[0.7s] max-h-[250px] w-full max-w-[300px] justify-self-center rounded-3xl px-10 py-6 shadow-lg transition-transform lg:shadow-md lg:hover:scale-110 lg:hover:shadow-lg"
+						className="duraton-[0.7s] max-h-[300px] w-full max-w-[300px] justify-self-center rounded-3xl px-10 py-6 shadow-lg transition-transform lg:shadow-md lg:hover:scale-110 lg:hover:shadow-lg"
 					>
 						<h2 className="mb-2 text-center text-[23px] font-semibold text-black">{item?.title}</h2>
 						<p className="break-words text-center text-base text-[#00000099]">{item?.body}</p>

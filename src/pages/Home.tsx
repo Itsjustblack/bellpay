@@ -5,13 +5,14 @@ import Footer from "../components/Footer";
 import PaymentSection from "@sections/HomeSections/PaymentSection";
 import GetStarted from "../components/GetStarted";
 import Pricing from "@sections/HomeSections/Pricing";
+import Layout from "../components/Layout";
 
 const Home = () => {
 	{
-		/* Sign up button should link to the  Coming Soon Page */
+		/* Sign up button should link to the Coming Soon Page */
 	}
 	return (
-		<div className="bg-white">
+		<Layout>
 			<HeroSection />
 			<Products />
 			<PaymentSection />
@@ -19,7 +20,7 @@ const Home = () => {
 			<WhyChooseBellPay />
 			<GetStarted />
 			<Footer />
-		</div>
+		</Layout>
 	);
 };
 
