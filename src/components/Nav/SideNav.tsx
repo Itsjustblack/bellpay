@@ -37,7 +37,7 @@ const SideNav: React.FC<SideNavProps> = ({ Open, setOpen }) => {
 					className="navItems mt-6 flex h-full w-full flex-col items-center space-y-3 bg-white lg:hidden"
 				>
 					<NavItem
-						path=""
+						path="products"
 						title="Products"
 						setOpen={setOpen}
 					/>

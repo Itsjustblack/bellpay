@@ -17,7 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
 	return (
 		<motion.div
 			className="relative h-full w-full"
-			initial={{ x: 400 }}
+			initial={{ x: 200 }}
 			animate={{ x: 0 }}
 			exit={{ x: 400 }}
 			transition={{

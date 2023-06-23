@@ -69,7 +69,7 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 				<div className="hidden justify-center space-x-[50px] lg:flex">
 					<NavItem
 						// onClick={() => setActive((prev) => !prev)}
-						path="/"
+						path="/products"
 						title="Products"
 					/>
 					<NavItem

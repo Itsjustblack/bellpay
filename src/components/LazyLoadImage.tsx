@@ -13,7 +13,7 @@ const LazyLoadImage = ({ src, alt, className }: LazyLoadImageProps) => {
 	return (
 		<img
 			src={src}
-			alt={alt || ""}
+			alt={alt || "an Image"}
 			className={`${className} ${loading ? "blur-[4px]" : "blur-none"} transition duration-[0.6s] ease-linear`}
 			onLoad={() => setLoading(false)}
 		/>

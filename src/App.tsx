@@ -9,9 +9,13 @@ import { useContext } from "react";
 import { AnimatePresence } from "framer-motion";
 import NavWrapper from "./components/Nav/NavWrapper";
 import { Route, Routes } from "react-router";
+import Products from "@pages/Products";
 
 function App() {
 	const { active } = useContext<VideoContextState>(videoContext);
+	{
+		/* Apply React-Scroll Library for Smooth Scrolling */
+	}
 	return (
 		<div className={`${active && "h-[100vh] overflow-hidden"}`}>
 			<Video />
@@ -21,6 +25,10 @@ function App() {
 						<Route
 							path="/"
 							element={<Home />}
+						/>
+						<Route
+							path="/products"
+							element={<Products />}
 						/>
 						<Route
 							path="/about"

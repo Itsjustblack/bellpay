@@ -10,8 +10,7 @@ export default {
 			backgroundImage: {
 				heroImage: "url('/src/assets/images/bgImage.png')",
 				rough: "url('/src/assets/images/roughBg.png')",
-				confetti: "url('/src/assets/images/confetti.png')",
-				confetti2: "url('/src/assets/images/confetti2.png')",
+				heroBg: "url('/src/assets/icons/productsHeroBg.svg')",
 			},
 			animation: {
 				"bounce-slow": "bounce 2s linear infinite",

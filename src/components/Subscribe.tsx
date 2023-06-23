@@ -3,7 +3,7 @@ const Subscribe = () => {
 		<div className="flex max-w-[330px] flex-col space-y-2">
 			<label
 				htmlFor="email"
-				className="self-center sm:text-lg"
+				className="self-center sm:text-lg lg:self-start"
 			>
 				Get notified when we launch
 			</label>
