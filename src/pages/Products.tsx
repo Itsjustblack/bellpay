@@ -7,6 +7,7 @@ import connect from "@images/connect.png";
 import deposit from "@images/safeDeposit.png";
 import LazyLoadImage from "../components/LazyLoadImage";
 import Footer from "../components/Footer";
+import heroBg from "@icons/productsHeroBg.svg";
 import GetStarted from "../components/GetStarted";
 
 interface ProductProps {
@@ -18,16 +19,18 @@ interface ProductProps {
 // eslint-disable-next-line react/prop-types
 const Product: React.FC<ProductProps> = ({ src, title, body }) => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex w-full flex-col">
 			<div className="flex min-w-[250px] max-w-[750px] flex-1 self-center">
-				<LazyLoadImage
-					src={src}
-					className="h-full w-full object-cover"
-				/>
+				<div className="overflow-hidden rounded-xl">
+					<LazyLoadImage
+						src={src}
+						className="h-full w-full object-cover md:h-[300px] md:w-[600px] xl:h-[383px] xl:w-[750px]"
+					/>
+				</div>
 			</div>
 			<div className="mt-8">
 				<h2 className="text-xl font-semibold sm:text-[30px] lg:text-[42px]">{title}</h2>
-				<p className="mt-2 text-sm sm:text-base xl:text-lg">{body}</p>
+				<p className="mt-2 text-sm sm:text-base lg:mt-4 xl:text-lg">{body}</p>
 			</div>
 		</div>
 	);
@@ -37,14 +40,18 @@ const Products = () => {
 	return (
 		<Layout>
 			<section className="overflow-hidden px-[35px] sm:px-[80px] lg:px-[130px]">
-				<header className="relative mt-5 flex h-[300px] w-full items-center justify-center bg-heroBg bg-contain bg-center bg-no-repeat sm:mt-10 sm:h-[550px]">
+				<header className="relative mt-6 flex h-[300px] w-full items-center justify-center sm:mt-12 sm:h-[550px]">
+					<LazyLoadImage
+						src={heroBg}
+						className="absolute h-full w-full object-contain"
+					/>
 					<div className="flex flex-col items-center justify-center pt-4">
 						<span className="text-[28px] font-semibold sm:text-[60px] md:text-[80px]">Our</span>
 						<span className="text-[28px] font-semibold text-[#4E0754] sm:text-[60px] md:text-[80px]">Products</span>
 						<p className="mt-2 w-[60%] text-center text-sm sm:text-lg">Experience the ease, dependability, and security of our payment solutions by signing up with us today.</p>
 					</div>
 				</header>
-				<div className="mb-10 flex flex-col justify-center space-y-[50px] lg:space-y-[80px]">
+				<div className="my-20 flex flex-col justify-center space-y-[50px] lg:space-y-[80px]">
 					<Product
 						src={cards}
 						title="Bell Shop"

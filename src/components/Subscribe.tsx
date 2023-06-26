@@ -1,6 +1,6 @@
 const Subscribe = () => {
 	return (
-		<div className="flex max-w-[330px] flex-col space-y-2">
+		<div className="flex w-full flex-col space-y-2">
 			<label
 				htmlFor="email"
 				className="self-center sm:text-lg lg:self-start"

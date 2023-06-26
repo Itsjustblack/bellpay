@@ -47,7 +47,7 @@ const FAQ = () => {
 					</div>
 					<LazyLoadImage
 						src={QAImage}
-						className="hidden lg:block"
+						className="hidden lg:block lg:h-[332px] lg:w-[235px]"
 					/>
 				</header>
 				<div className="mb-20 flex flex-col space-y-10">

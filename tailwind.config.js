@@ -10,6 +10,7 @@ export default {
 			backgroundImage: {
 				heroImage: "url('/src/assets/images/bgImage.png')",
 				rough: "url('/src/assets/images/roughBg.png')",
+				confetti: "url('/src/assets/images/confetti.png')",
 				heroBg: "url('/src/assets/icons/productsHeroBg.svg')",
 			},
 			animation: {

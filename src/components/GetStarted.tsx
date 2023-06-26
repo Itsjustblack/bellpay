@@ -10,7 +10,7 @@ const GetStarted = () => {
 				</h2>
 				<button
 					onClick={() => navigate("/comingsoon")}
-					className="rounded-xl bg-white px-8 py-3 text-[20px] font-semibold text-black transition-all duration-[0.7s] lg:scale-75 lg:rounded-3xl lg:px-20 lg:py-6 lg:text-[32px] lg:hover:scale-100"
+					className="rounded-xl bg-white px-8 py-3 text-[20px] font-semibold text-black transition-all duration-[0.7s] lg:scale-75 lg:rounded-3xl lg:px-20 lg:py-6 lg:text-[32px] lg:hover:scale-90"
 				>
 					Get Started
 				</button>
