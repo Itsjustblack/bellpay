@@ -17,15 +17,19 @@ const Layout = ({ children }: LayoutProps) => {
 	return (
 		<motion.div
 			className="relative h-full w-full"
-			initial={{ x: 200 }}
-			animate={{ x: 0 }}
-			exit={{ x: 400 }}
-			transition={{
-				type: "spring",
-				stiffness: 260,
-				damping: 20,
-				duration: 0.3,
-			}}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ opacity: { duration: 0.6, ease: "easeInOut" } }}
+			// initial={{ x: 200 }}
+			// animate={{ x: 0 }}
+			// exit={{ x: 200 }}
+			// transition={{
+			// 	type: "spring",
+			// 	stiffness: 260,
+			// 	damping: 20,
+			// 	duration: 0.3,
+			// }}
 		>
 			{children}
 		</motion.div>

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import returnArrow from "@icons/back.svg";
 import Error from "@images/404Error.png";
 import Layout from "../components/Layout";
+import LazyLoadImage from "../components/LazyLoadImage";
 
 const NotFoundPage = () => {
 	const navigate = useNavigate();
@@ -10,7 +11,7 @@ const NotFoundPage = () => {
 			<div className="py-auto mx-9 flex h-[80vh] flex-col items-center justify-center pt-8 lg:mx-[130px] lg:flex-row">
 				{/* lg:pt-[140x] xl:pt-[140px] */}
 				<div className="relative flex max-h-[200px] max-w-[350px] flex-1 lg:hidden">
-					<img
+					<LazyLoadImage
 						src={Error}
 						className="h-full w-full object-cover"
 					/>
@@ -30,7 +31,7 @@ const NotFoundPage = () => {
 					</div>
 				</div>
 				<div className="relative hidden max-h-[450px] max-w-[500px] flex-1 lg:flex">
-					<img
+					<LazyLoadImage
 						src={Error}
 						className="h-full w-full object-cover"
 					/>

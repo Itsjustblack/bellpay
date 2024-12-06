@@ -51,7 +51,7 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 		}
 	});
 	return (
-		<div>
+		<nav>
 			<div
 				style={{ zIndex: 100 }}
 				className={`fixed top-0 flex h-[57.3px] w-full flex-row items-center justify-between space-x-[40px] bg-white px-8 transition-shadow duration-[0.5s] lg:h-[75px] lg:px-[60px] xl:px-[120px] ${overlay && "shadow"}`} /* shadow */
@@ -98,7 +98,7 @@ const TopNav: React.FC<TopNavProps> = ({ setOpen }) => {
 				</div>
 			</div>
 			{/* {active && <TopNavMenu />} */}
-		</div>
+		</nav>
 	);
 };
 
