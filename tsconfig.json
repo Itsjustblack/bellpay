@@ -4,9 +4,9 @@
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"module": "ESNext",
 		"skipLibCheck": true,
-		// "baseUrl": "./src",
+		"baseUrl": "./src",
 		"paths": {
-			// "@/*": ["/*"],
+			"@/*": ["./src/*"],
 			"@sections/*": ["./src/sections/*"],
 			"@pages/*": ["./src/pages/*"],
 			"@icons/*": ["./src/assets/icons/*"],
