@@ -1,7 +1,7 @@
 import MasterCard from "@icons/mastercardLogo.svg";
 import Paypal from "@icons/paypalLogo.svg";
 import Verve from "@icons/verveLogo.svg";
-import Visa from "@icons/visaLogo.svg";
+import Visa from "@icons/VisaLogo.svg";
 
 import { FC } from "react";
 
