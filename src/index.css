@@ -46,15 +46,14 @@ img {
 	border-color: black;
 }
 
-.carousel {
-	animation: carouselAnimation 15s linear infinite;
-}
-
-@keyframes carouselAnimation {
+@keyframes carousel {
 	0% {
-		left: -1100px;
+		transform: translateX(0);
 	}
 	100% {
-		left: 1200px;
+		transform: translateX(-50%);
 	}
+}
+.carousel {
+	animation: carousel 5s linear infinite;
 }
