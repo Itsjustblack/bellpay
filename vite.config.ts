@@ -15,4 +15,5 @@ export default defineConfig({
 			"@images": path.resolve(__dirname, "./src/assets/images"),
 		},
 	},
+	assetsInclude: ["**/*.svg"], // Include SVGs as static assets
 });

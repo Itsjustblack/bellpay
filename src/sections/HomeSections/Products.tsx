@@ -3,7 +3,7 @@
 // import productImage3 from "@images/productImage3.png";
 import bitcoin from "@icons/bitcoin.svg";
 import wallet from "@icons/wallet.svg";
-import onlinepay from "@icons/onlinepay.svg";
+import onlinepay from "../../assets/icons/onlinePay.svg";
 
 const Payment = () => {
 	return (
